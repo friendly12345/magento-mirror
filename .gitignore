@@ -1,1 +1,9 @@
 /app/etc/local.xml
+/var/cache
+/var/locks
+/var/session
+/var/tmp
+/media/catalog/product/cache
+/media/css
+/media/js
+/media/wysiwyg/.thumbs
