@@ -54,7 +54,8 @@ class Mage_Catalog_Block_Product_List_Upsell extends Mage_Catalog_Block_Product_
         $product = Mage::registry('product');
         /* @var $product Mage_Catalog_Model_Product */
         $this->_itemCollection = $product->getUpSellProductCollection()
-            ->addAttributeToSort('position', Varien_Db_Select::SQL_ASC)
+            // ->addAttributeToSort('position', Varien_Db_Select::SQL_ASC)
+            ->setPositionOrder(Zend_Db_Select::SQL_ASC)
             ->addStoreFilter()
         ;
         if (Mage::helper('catalog')->isModuleEnabled('Mage_Checkout')) {
