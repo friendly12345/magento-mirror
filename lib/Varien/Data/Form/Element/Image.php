@@ -126,4 +126,10 @@ class Varien_Data_Form_Element_Image extends Varien_Data_Form_Element_Abstract
     {
         return  $this->getData('name');
     }
+
+    public function getValue($data = null)
+    {
+    	$value = $this->getData('value', $data);
+    	return is_array($value) ? $value['value'] : $value;
+    }
 }
